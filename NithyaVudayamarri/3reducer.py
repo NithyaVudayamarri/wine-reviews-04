@@ -16,11 +16,11 @@ for line in s:
     # start over when changing keys
     thisKey = country
     thisValue = 0.0
-    count=1
+    
   
   # apply the aggregation function
-  thisValue += float(amount)
-  count += 1
+  thisValue = max(thisValue,float(amount))
+  
 
 # output the final entry when done
 r.write(thisKey + '\t' + str(thisValue/count)+'\n')
